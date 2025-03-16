@@ -58,8 +58,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
       Color? iconColor}) {
     double size = 100;
     AlertDialog alert = AlertDialog(
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(32.0))),
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
         actionsPadding: const EdgeInsets.only(right: 20),
         title: Center(
           child: SizedBox(
@@ -114,8 +113,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
             child: Align(
               alignment: Alignment.center,
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 width: MediaQuery.of(context).size.width * 0.85,
                 decoration: const BoxDecoration(
                   color: Colors.white,
@@ -137,8 +135,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
                           duration: const Duration(milliseconds: 600),
                           tween: Tween<double>(begin: 0, end: 1),
                           builder: (BuildContext context, double value, child) {
-                            return Icon(Icons.info_outlined,
-                                size: size * value, color: Colors.blue);
+                            return Icon(Icons.info_outlined, size: size * value, color: Colors.blue);
                           },
                         ),
                       ),
@@ -177,7 +174,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
         ],
       );
     });
-    overlayState.insert(overlayEntry);
+    overlayState?.insert(overlayEntry);
   }
 
   closeOverlay() {
